@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+* {
+	outline: none;
+	font-family: 'VT323', monospace;
+}
+:root {
+	--theme-color: #006fff;
+	--theme-button-shadow: rgba(0, 111, 255, 0.1);
+}
+body {
+	display: grid;
+	text-align: center;
+	background: linear-gradient(to right, black, #000b19);
+	color: var(--theme-color);
+	max-width: 100vw;
+}
+header,
+.stats {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+footer {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+footer > button {
+	min-width: 25%;
+	margin: 0;
+	height: 4.5rem;
+	border-radius: 0;
+}
+h1 {
+	font-size: 4rem;
+	margin: 1rem 0;
+}
+h3,
+span {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+h1,
+h3 {
+	text-shadow: 0 -0.05rem 0.05rem rgba(255, 255, 255, 0.6);
+	text-transform: uppercase;
+}
+
+button {
+	transition: 0.3s;
+	font-size: 2rem;
+	padding: 0.75rem 1.75rem;
+	cursor: pointer;
+	background: var(--theme-color);
+	color: white;
+	border: 0.15rem groove var(--theme-color);
+	box-shadow: inset 0.75rem 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.8),
+		0 0.5rem 0.9375rem var(--theme-button-shadow);
+	min-height: 5vh;
+	min-width: 25vw;
+}
+#start-button {
+	text-transform: uppercase;
+	text-shadow: 0 -0.0275rem 0.0275rem rgba(0, 0, 0, 0.6);
+	border-radius: 0.25rem;
+	margin-top: 1rem;
+}
+button:hover {
+	color: var(--theme-color);
+	background: white;
+	border-color: white;
+}
+footer {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+footer > button {
+	min-width: 25%;
+	margin: 0;
+	height: 4.5rem;
+	border-radius: 0;
+}
+.grid,
+.mini-grid {
+	box-shadow: 0 0 2rem inset rgba(0, 0, 0, 0.5);
+	background-color: var(--theme-color);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.25rem;
+	border-radius: 1vh;
+}
+.grid {
+	height: 50vh;
+	width: 25vh;
+}
+.mini-grid {
+	height: 10vh;
+	width: 10vh;
+}
+.grid div,
+.mini-grid div {
+	height: 2vh;
+	width: 2vh;
+	margin: 0.25vh;
+	border-radius: 0.5vh;
+}
+.tetromino {
+	background-color: blue;
+	box-shadow: 0.1rem 0.1rem 0.1rem inset rgba(255, 255, 255, 0.5);
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+@media screen and (max-width: 600px) {
+	* {
+		font-size: 3.25vw;
+	}
+}
